@@ -1,0 +1,124 @@
+/* Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  min-height: 90vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page title */
+.dashboard-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  padding-bottom: 40px;
+  
+}
+
+/* Grid for cards */
+.registrations-list {
+ 
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card styling */
+.registration-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff1a;
+  border: 1px solid #e0e0e059;
+  padding: 5px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.reg-card-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.registration-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #6c63ff;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* Text */
+.registration-card p {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.547);
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Status badges */
+.status {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.status.confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-card {
+    max-width: 90%;
+  }
+  .reg-card-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.8rem;
+  }
+  .registration-title {
+    font-size: 1.2rem;
+  }
+}
